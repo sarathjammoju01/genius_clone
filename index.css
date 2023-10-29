@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Roboto&display=swap');
+
+/*  ===================================
+        CSS RESET
+ ==================================== */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}   
+*/
+
+/* ================================
+GENERAL LAYOUT 
+=================================== */
+
+:root {
+    --primary-color: rgb(243, 243, 243);
+    --secondary-color: rgb(42, 42, 42);
+    --tertiary-color: rgb(0, 0, 0);
+    --primary-accent-color: rgb(255, 255, 100);
+    --secondary-accent-color: rgb(255, 160, 176);
+
+    --heading-font-family: 'poppins', sans-serif;
+    --seconary-font-family: 'roboto', sans-serif;
+
+    --font-weight-bold: 600;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+
+
+
+/* It will remove the search bar outline dark border */
+input:focus {
+    outline: none;
+}
+
+input {
+    border: none;
+}
+
+main > section {
+    margin-top: 2rem!important; 
+}
+
+
+
+/* =======================================
+    utility classes 
+    ====================================== */
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 1182px;
+    margin: 0 auto;
+    padding: 0 2rem; 
+}
+
+
+.bigNewsHead{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.bigNewsHead::after{
+    content: "";
+    background-color: black;
+    height: 0.15rem;
+    flex-grow: 1;
+
+}
+
+h2:hover, h3:hover{
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+}
+h3{
+    font-weight: var(--font-weight-normal);
+}
+
+.smallText{
+    font-size: 0.8rem;
+}
+
+/* =======================================
+            header
+    ====================================== */
+
+header {
+    background-color: var(--primary-accent-color);
+    justify-content: space-between;
+    padding: 0.5rem 0.2rem;
+}
+
+form .searchBox {
+    background-color: var(--primary-accent-color);
+}
+
+header>img {
+    width: 8rem;
+}
+
+
+.headerButtons {
+    column-gap: 1rem;
+    align-items: center;
+    /* align-self: flex-end; */
+}
+
+.headerButtons a {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+
+/* =======================================
+                subHeader section
+    ====================================== */
+
+
+.subHeader nav {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    border-right: 1px solid black;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--heading-font-family);
+}
+
+.subHeader nav > * {
+    padding: 0 1.5rem;
+    border-right: 1px solid white;
+    text-align: center;
+}
+
+.subHeader nav :last-child {
+    border: 0px;
+}
+
+.subHeader nav div > * {
+    padding: 0 0.4rem;
+}
+
+
+/* =======================================
+            BigNews Content section
+    ====================================== */
+
+
+.bigNewsContent {
+    width: 45%;
+}
+
+.bigNewsImageContainer {
+    width: 55%;
+    background-image: url("https://t2.genius.com/unsafe/349x349/https%3A%2F%2Fimages.genius.com%2F77fcc2a22a823d2d69c338e1de8b7dc0.1000x1000x1.png");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    height: 20rem;
+}
+
+
+
+/* =======================================
+            small news section
+    ====================================== */
+ 
+.smallNewsSection{
+    gap: 2rem;
+} 
+
+.smallNewsSection > .smallNewsContent{
+    padding-right: 2rem;
+    border-right: 2px solid black;
+}
+
+.smallNewsSection :last-child{
+    padding-right: 0px;
+    border-right: 0px ;
+}
+
+
+.smallNewsImageContaner{
+    
+    background-image: url("https://t2.genius.com/unsafe/349x349/https%3A%2F%2Fimages.genius.com%2F77fcc2a22a823d2d69c338e1de8b7dc0.1000x1000x1.png");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    height: 10rem;
+    /* padding: 2rem; */
+}
+
+#smallNewsImage1{
+    background-image: url("https://t2.genius.com/unsafe/204x204/https%3A%2F%2Fimages.genius.com%2F255328f374e9e9f272fd1a0dac179ffa.1000x1000x1.png");
+}
+
+#smallNewsImage2{
+    background-image: url("https://t2.genius.com/unsafe/363x204/https%3A%2F%2Fimages.genius.com%2F825d74099d823dbea1ddf9f92f183c50.3200x1800x1.png");
+}
+
+#smallNewsImage3{
+    background-image: url("https://t2.genius.com/unsafe/204x204/https%3A%2F%2Fimages.genius.com%2Fad4913d612679e500db8435813beec9b.1000x1000x1.png");
+}
+
+#smallNewsImage4{
+    background-image: url("https://t2.genius.com/unsafe/363x204/https%3A%2F%2Fimages.genius.com%2F7e6b13f8d9fa506a85cedf5c58cf4d40.1920x1080x1.png");
+}
+
+
+/* =======================================
+            chart leader section
+    ====================================== */
+
+
+
+.chartsLeaderHeader{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chartsLeaderHeader .dropDown{
+    border: 2px solid black;
+    padding: 0.55rem 0.25rem;
+    font-size: 0.75rem;
+}
+
+.chartsLeaderHeader .dropDown span{
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.temp{
+    height: 50rem;
+}
